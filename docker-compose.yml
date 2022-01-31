@@ -1,0 +1,10 @@
+---
+version: "3.8"
+services:
+  httpserverdebug:
+    image: ghcr.io/olliejc/httpserverdebug:latest
+    volumes:
+      - ./config.json:/app/config.json
+    ports:
+      - 28080:80
+    restart: unless-stopped
