@@ -1,0 +1,9 @@
+---
+applications:
+- name: http-check
+  memory: 16M
+  disk_quota: 64M
+  buildpacks:
+    - python_buildpack
+  command: python main.py
+  health-check-type: process

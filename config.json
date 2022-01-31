@@ -1,0 +1,24 @@
+{
+  "/": {
+    "get": {
+      "body": "",
+      "status_code": 200
+    }
+  },
+  "/robots.txt": {
+    "get": {
+      "body": "User-agent: *\nDisallow: /",
+      "status_code": 200
+    }
+  },
+  "*": {
+    "get": {
+      "request_as_body": true,
+      "status_code": 200
+    },
+    "post": {
+      "body": "Method Not Allowed",
+      "status_code": 405
+    }
+  }
+}
